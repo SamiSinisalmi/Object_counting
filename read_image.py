@@ -11,9 +11,9 @@ def get_image_data(dir_name):
     for file in files:
         data = img.imread(dir_name + file)
         
-        plt.imshow(data)
-        plt.axis('off')
-        plt.show(i)
+        #plt.imshow(data)
+        #plt.axis('off')
+        #plt.show(i)
         
         i += 1
         
