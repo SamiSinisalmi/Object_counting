@@ -1,22 +1,15 @@
 import os
-import matplotlib.image as img
-import matplotlib.pyplot as plt
+import cv2
 
 def get_image_data(dir_name):
 
+    print('reading images ...')
+    
     files = os.listdir(dir_name)
     
-    i = 0
     image_data = []
     for file in files:
-        data = img.imread(dir_name + file)
-        
-        #plt.imshow(data)
-        #plt.axis('off')
-        #plt.show(i)
-        
-        i += 1
-        
+        data = cv2.imread(dir_name + file)
         image_data.append(data)
     
     return image_data

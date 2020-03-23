@@ -3,15 +3,12 @@ from processing import color_transform
 from blob_detection import count_blobs
 import matplotlib.pyplot as plt
 
-import cv2
-import numpy as np
-
 DIRECTORY_NAME = 'images/'
 
 def main():
     image_data = get_image_data(DIRECTORY_NAME)
     
-    test_image = image_data[2]
+    test_image = image_data[3]
     
     plt.figure(1, figsize=(150,150))
     plt.subplot(211)
@@ -27,6 +24,8 @@ def main():
     plt.show()
     
     blobs = count_blobs(processed_image)
+    
+    print('found', blobs, 'blob(s)')
     
 if __name__ == "__main__":
     main()

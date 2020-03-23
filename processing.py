@@ -3,9 +3,9 @@ import numpy as np
 def color_transform(image):
     print('processing colors ...')
     
-    threshold_red = image[:,:,0] > 0.7
-    threshold_green = image[:,:,1] > 0.5
-    threshold_blue = image[:,:,2] > 0.6
+    threshold_red = image[:,:,0] > 179
+    threshold_green = image[:,:,1] > 128
+    threshold_blue = image[:,:,2] > 153
     
     ''' Pick either green or red and blue '''
     #threshold = threshold_green
@@ -14,6 +14,7 @@ def color_transform(image):
     image[:,:,0] = threshold
     image[:,:,1] = threshold
     image[:,:,2] = threshold
+    image = image*255
     
     return image
     
