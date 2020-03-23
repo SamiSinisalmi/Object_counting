@@ -1,6 +1,10 @@
 from read_image import get_image_data
 from processing import color_transform
+from blob_detection import count_blobs
 import matplotlib.pyplot as plt
+
+import cv2
+import numpy as np
 
 DIRECTORY_NAME = 'images/'
 
@@ -21,6 +25,8 @@ def main():
     plt.axis('off')
     
     plt.show()
+    
+    blobs = count_blobs(processed_image)
     
 if __name__ == "__main__":
     main()
