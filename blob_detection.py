@@ -12,7 +12,7 @@ def count_blobs(image):
     params.filterByColor = True
     params.blobColor = 255
     params.filterByArea = True
-    params.minArea = 5
+    params.minArea = 10
     params.filterByInertia = False
     params.filterByConvexity = False
     

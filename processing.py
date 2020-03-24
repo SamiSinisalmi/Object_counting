@@ -1,4 +1,5 @@
 import numpy as np
+import cv2
 
 def color_transform(image):
     print('processing colors ...')
@@ -17,4 +18,11 @@ def color_transform(image):
     image = image*255
     
     return image
+
+def median_filter(image):
+    print('applying a median filter ...')
+    
+    median_image = cv2.medianBlur(image, 7)
+    
+    return median_image
     
