@@ -22,7 +22,7 @@ def color_transform(image):
 def median_filter(image):
     print('applying a median filter ...')
     
-    median_image = cv2.medianBlur(image, 7)
+    median_image = cv2.medianBlur(image, 5)
     
     return median_image
     
