@@ -3,9 +3,6 @@ import numpy as np
 
 def count_blobs(image):
     print('counting blobs ...')
-
-    #detector = cv2.SimpleBlobDetector_create()
-    #keypoints = detector.detect(image)
     
     params = cv2.SimpleBlobDetector_Params()
     

@@ -5,7 +5,7 @@ def color_transform(image):
     print('processing colors ...')
     
     threshold_red = image[:,:,0] > 179
-    threshold_green = image[:,:,1] > 128
+    #threshold_green = image[:,:,1] > 128
     threshold_blue = image[:,:,2] > 153
     
     ''' Pick either green or red and blue '''
